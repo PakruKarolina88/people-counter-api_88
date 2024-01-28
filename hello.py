@@ -13,7 +13,6 @@ class PeopleCounter(Resource):
     def get(self):
         img = cv2.imread('dworzec.jpg')
         boxes, weights = hog.detectMultiScale(img, winStride=(8, 8))
-
         return {'count': len(boxes)}
 
 
